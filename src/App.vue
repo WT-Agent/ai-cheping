@@ -348,7 +348,7 @@ const metricsList = [
   { key: 'safetyRigor', label: '安全可靠度 (Safety)' }
 ];
 
-const aiScores = ref<{ powerPerformance: number; spaceComfort: number; smartTech: number; costPerformance: number; safetyRigor: number; } | null>(null);
+const aiScores = ref<Record<string, number> | null>(null);
 
 const styleOptions = [
   { label: '极客硬核数据参数对比流 (动力三电/零百加速/续航达成率/底盘悬架/芯片)', value: '极客硬核数据参数对比流' },
@@ -366,7 +366,7 @@ interface HistoryItem {
   destination: string;
   input: string;
   styleLabel: string;
-  aiScores: { powerPerformance: number; spaceComfort: number; smartTech: number; costPerformance: number; safetyRigor: number; } | null;
+  aiScores: Record<string, number> | null;
   output: string;
 }
 
